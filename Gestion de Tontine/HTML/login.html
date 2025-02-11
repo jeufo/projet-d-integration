@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion et Inscription</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+    
+
+        <!-- Sign Up Form -->
+        <div class="form-container" id="signup-container">
+            <h1>Créer un Compte</h1>
+            <form id="signup-form">
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" placeholder="Nom d'utilisateur" name="username" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-envelope icon"></i>
+                    <input type="text" placeholder="Email" name="username" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-lock icon"></i>
+                    <input type="text" placeholder="Mot de passe" name="username" required>
+                </div>
+
+                <label for="signup-role">Rôle :</label>
+                <select id="signup-role" required>
+                    <option value="member">Membre</option>
+                    <option value="admin">Administrateur</option>
+                </select>
+
+                <button type="submit"><a href="logins.html">Créer le Compte</a></button>
+                <p class="toggle-form" id="show-login">Déjà un compte ? <a href="logins.html">Connectez-vous ici</a> </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/login.js"></script>
+</body>
+</html>

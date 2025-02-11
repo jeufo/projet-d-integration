@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecte des Contributions</title>
+    <link rel="stylesheet" href="../CSS/contributions.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Rapports</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <h1>Collecte des Contributions</h1>
+            <button id="addContributionBtn" class="btn">Nouvelle Contribution</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <table class="contributions-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Membre</th>
+                        <th>Montant</th>
+                        <th>Date Limite</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="contributionsList">
+                    <!-- Les contributions seront ajoutées ici dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal pour Enregistrer une Contribution -->
+    <div id="contributionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Nouvelle Contribution</h2>
+            <form id="contributionForm">
+                <label for="member">Membre :</label>
+                <input type="text" id="member" required>
+                <label for="amount">Montant :</label>
+                <input type="number" id="amount" required>
+                <label for="dueDate">Date Limite :</label>
+                <input type="date" id="dueDate" required>
+                <button type="submit" class="btn">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/contribution.js"></script>
+</body>
+</html>

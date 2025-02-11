@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Tirages au Sort</title>
+    <link rel="stylesheet" href="../CSS/tirage.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Tableau_de_Bord</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <h1>Gestion des Tirages au Sort</h1>
+            <button id="startDrawBtn" class="btn">Lancer le Tirage au Sort</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h2>Historique des Tirages</h2>
+            <table class="draws-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Critères</th>
+                        <th>Gagnant</th>
+                    </tr>
+                </thead>
+                <tbody id="drawsList">
+                    <!-- Les tirages seront ajoutés ici dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal pour Configurer les Critères -->
+    <div id="drawModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Configurer les Critères</h2>
+            <form id="criteriaForm">
+                <label for="criteriaInput">Critères :</label>
+                <input type="text" id="criteriaInput" placeholder="Ex: Contributions élevées" required>
+                <button type="submit" class="btn">Commencer le Tirage</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/tirage.js"></script>
+</body>
+</html>

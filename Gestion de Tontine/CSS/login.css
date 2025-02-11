@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    gap: 40px;
+
+}
+.image_Container_Connexion
+{
+    width: 60%;
+    height: 100%;
+}
+.container_Principale
+{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+.form-container {
+    margin-right: 10%;
+    width: 50%;
+    height: 70%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgb(73, 66, 66);
+ 
+}
+
+.form-container img {
+    margin: 0 auto;
+    display: block;
+    width: 25%;
+    height: 20%;
+    margin-bottom: 2em;
+
+}
+
+ .social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.social-login .btn {
+    display: inline-block;
+    margin: 3px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.social-login .btn.facebook {
+   
+    color: blue;
+}
+
+.social-login .btn.google {
+   
+    color: red
+}
+
+.social-login .btn.twitter {
+   
+    color: blue;
+}
+
+.social-login .btn:hover {
+    opacity: 0.8;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    /* Ajoutez un padding à gauche pour l'icône */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+
+
+
+form  button  {
+    
+    padding: 10px 20px;
+    background-color: #0425e0;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    border: none;
+}
+
+#login-form button:hover {
+    background-color: #281166;
+}
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.toggle-form {
+    text-align: center;
+    color: rgba(20, 15, 15, 0.63);
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+form p a {
+    
+    
+text-decoration: none;
+color: blue;
+}
+form button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+ h1 {
+    text-align: center;
+    color: blue;;
+    
+}
+h2{
+    text-align: center;
+
+} 

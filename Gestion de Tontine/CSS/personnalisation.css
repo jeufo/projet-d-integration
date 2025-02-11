@@ -1,0 +1,107 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+.header {
+    background: #046a8dec;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+h2 {
+    color: #31eec8;
+}
+
+.preferences-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preferences-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.preferences-form select,
+.preferences-form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.preferences-form button {
+    background: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.preferences-form button:hover {
+    background: #44f118;
+}
+
+.confirmation-message {
+    text-align: center;
+    background: #e8f8f5;
+    border: 1px solid #16a085;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    color: #16a085;
+}
+
+.confirmation-message.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .preferences-section {
+        padding: 15px;
+    }
+}
+
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}

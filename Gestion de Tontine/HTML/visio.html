@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visioconférence et Chat</title>
+    <link rel="stylesheet" href="../CSS/visio.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Réunion en Ligne</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Tableau_de_Bord</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <section class="video-section">
+                <h2>Visioconférence</h2>
+                <iframe 
+                    id="videoFrame"
+                    src="https://youtube.com/embed" 
+                    allow="camera; microphone; fullscreen"
+                    title="Visioconférence"
+                    frameborder="0"></iframe>
+                <button class="btn" onclick="joinMeeting()">Rejoindre la Réunion</button>
+            </section>
+
+            <section class="chat-section">
+                <h2>Chat en Temps Réel</h2>
+                <div class="chat-box">
+                    <div id="chatMessages" class="chat-messages">
+                        <!-- Messages dynamiques -->
+                    </div>
+                    <form id="chatForm" class="chat-form">
+                        <input type="text" id="chatInput" placeholder="Écrivez un message..." required>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../JS/visio.js"></script>
+</body>
+</html>
