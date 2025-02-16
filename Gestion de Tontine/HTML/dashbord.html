@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Gestion des Tontines</title>
+    <link rel="stylesheet" href="../CSS/dashbord.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class = "wrapper">
+    <header class="header">
+        <div class="container">
+            <img src="../images/Logo.png" alt="images">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li>
+                        <a href="#">Gestion des membres</a>
+                        <ul class="dropdown">
+                        <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                        <li><a href="contributions.html">Contributions</a></li>
+                        <li><a href="emprunts.html">Emprunts</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Suivi</a>
+                        <ul class="dropdown">
+                            <li><a href="suivi.html">Suivi</a></li>
+                            <li><a href="historique.html">Historique</a></li>
+                            <li><a href="tableau-de-bord.html">Rapport</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="reunions.html">Reunion</a>
+                        <ul class="dropdown">
+                            <li><a href="reunions.html">Reunion</a></li>
+                            <li><a href="visio.html">Visioconférence</a></li>
+                            <li><a href="tirages.html">Tirages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li>
+                        <a href="person.html">Parametre</a>
+                        <ul class="dropdown">
+                            <li><a href="person.html">Personnalisation et Langues</a></li>
+                            <li><a href="notifications.html">Notification</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <main class="main-content">
+            <h2>Bienvenue sur le tableau de bord</h2>
+            <canvas id="myChart" width="400" height="70"></canvas>
+            <section id="dashboard" class="dashboard">
+               
+                <div class="grid">
+                    <div class="card">
+                        <h3>Indicateurs financiers</h3>
+                        <p>Visualisez les contributions, emprunts et plus encore.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Prochaines réunions</h3>
+                        <p>Planifiez et participez aux réunions en ligne.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Rapports automatiques</h3>
+                        <p>Générez des rapports financiers instantanément.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Historique</h3>
+                        <p>Accédez à l'historique complet des décisions.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 Gestion des Tontines. Tous droits réservés.</p>
+        </footer>
+</div>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar', // Type de diagramme (bar, line, pie, etc.)
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Contributions',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+    <script src="../JS/dashbord.js"></script>
+</body>
+</html>

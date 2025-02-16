@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique des Transactions et Actions</title>
+    <link rel="stylesheet" href="../CSS/historique.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Rapports</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <h1>Historique des Transactions et Actions</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h2>Historique Complet</h2>
+            <div class="filters">
+                <label for="filterType">Type d'Action :</label>
+                <select id="filterType">
+                    <option value="all">Tous</option>
+                    <option value="contribution">Contributions</option>
+                    <option value="loan">Emprunts</option>
+                    <option value="decision">Décisions</option>
+                </select>
+            </div>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Montant (€)</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTableBody">
+                    <!-- Les données seront insérées dynamiquement ici -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../JS/historique.js"></script>
+</body>
+</html>

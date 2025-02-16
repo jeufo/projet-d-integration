@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement en Ligne</title>
+    <link rel="stylesheet" href="../CSS/paiement.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Rapports</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <h1>Paiement en Ligne</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="payment-section">
+                <h2>Effectuer un Paiement</h2>
+                <form id="paymentForm" class="payment-form">
+                    <label for="amount">Montant (CAD)</label>
+                    <input type="number" id="amount" placeholder="Entrez le montant" required min="1">
+
+                    <label for="paymentMethod">Méthode de Paiement</label>
+                    <select id="paymentMethod" required>
+                        <option value="paypal">PayPal</option>
+                        <option value="stripe">Carte Bancaire (Stripe)</option>
+                    </select>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Votre email" required>
+
+                    <button type="submit" class="btn">Payer Maintenant</button>
+                </form>
+            </section>
+
+            <div id="confirmationMessage" class="confirmation-message hidden">
+                <h3>Merci pour votre paiement !</h3>
+                <p>Votre transaction a été enregistrée avec succès.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../JS/paiement.js"></script>
+</body>
+</html>

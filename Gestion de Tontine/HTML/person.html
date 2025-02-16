@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres et Personnalisation</title>
+    <link rel="stylesheet" href="../CSS/personnalisation.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Rapports</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <h1>Paramètres et Personnalisation</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="preferences-section">
+                <h2>Préférences de Langue</h2>
+                <form id="languageForm" class="preferences-form">
+                    <label for="language">Choisir la langue :</label>
+                    <select id="language" required>
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+
+                    <h2>Notifications</h2>
+                    <label for="emailNotifications">Notifications par Email :</label>
+                    <input type="checkbox" id="emailNotifications" checked>
+
+                    <label for="smsNotifications">Notifications par SMS :</label>
+                    <input type="checkbox" id="smsNotifications">
+
+                    <button type="submit" class="btn">Sauvegarder les Paramètres</button>
+                </form>
+            </section>
+
+            <div id="confirmationMessage" class="confirmation-message hidden">
+                <h3>Paramètres sauvegardés avec succès !</h3>
+                <p>Vos préférences ont été mises à jour.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../JS/personnalisation.js"></script>
+</body>
+</html>

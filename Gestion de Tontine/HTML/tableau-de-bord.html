@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <link rel="stylesheet" href="../CSS/bord.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        
+              
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="suivi.html">Suivi</a></li>
+                    <li><a href="historique.html">Historique</a></li>
+                    <li><a href="reunions.html">Reunion</a></li>
+                    <li><a href="notifications.html">Notification</a></li>
+                    <li><a href="tableau-de-bord.html">Rapports</a></li>
+                    <li><a href="tirages.html">Tirages</a></li>
+                    <li><a href="visio.html">Visioconférence</a></li>
+                    <li><a href="paiements.html">Paiement</a></li>
+                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                </ul>
+            </nav>
+            <h1>Tableau de Bord Administrateur</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="stats">
+                <h2>Indicateurs Clés</h2>
+                <div class="stat-cards">
+                    <div class="card">
+                        <h3>Total Contributions</h3>
+                        <p id="totalContributions">0 CAD</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Emprunts</h3>
+                        <p id="totalLoans">0 CAD</p>
+                    </div>
+                    <div class="card">
+                        <h3>Réunions Planifiées</h3>
+                        <p id="totalMeetings">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reports">
+                <h2>Générer un Rapport</h2>
+                <form id="reportForm">
+                    <label for="reportStart">Date Début :</label>
+                    <input type="date" id="reportStart" required>
+                    <label for="reportEnd">Date Fin :</label>
+                    <input type="date" id="reportEnd" required>
+                    <button type="submit" class="btn">Générer</button>
+                </form>
+                <div id="reportOutput" class="report-output"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../JS/bord.js"></script>
+</body>
+</html>
