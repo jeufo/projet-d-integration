@@ -52,8 +52,8 @@ function renderMembers() {
             <td>${member.email}</td>
             <td>${member.role}</td>
             <td>
-                <button class="btn" onclick="editMember(${member.id})">Modifier</button>
-                <button class="btn btn-danger" onclick="deleteMember(${member.id})">Supprimer</button>
+                <button class="bouton" onclick="editMember(${member.id})">Modifier</button>
+                <button class="bouton" onclick="deleteMember(${member.id})">Supprimer</button>
             </td>
         </tr>
     `).join('');
@@ -69,7 +69,7 @@ function editMember(id) {
     document.getElementById('email').value = member.email;
     document.getElementById('role').value = member.role;
     document.getElementById('modalTitle').innerText = 'Modifier un Membre';
-    memberModal.style.display = 'flex';
+    memberModal.style.display = 'flex' , memberModal.style.width = '50%';
 }
 
 // Supprimer un membre
