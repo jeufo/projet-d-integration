@@ -48,8 +48,8 @@ function renderLoans() {
             <td>${loan.status}</td>
             <td>${loan.requestDate}</td>
             <td>
-                <button class="btn btn-success" onclick="approveLoan(${loan.id})">Valider</button>
-                <button class="btn btn-danger" onclick="rejectLoan(${loan.id})">Refuser</button>
+                <button class="bouton" onclick="approveLoan(${loan.id})">Valider</button>
+                <button class="bouton" onclick="rejectLoan(${loan.id})">Refuser</button>
             </td>
         </tr>
     `).join('');

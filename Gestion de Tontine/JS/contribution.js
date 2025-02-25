@@ -49,7 +49,7 @@ function renderContributions() {
             <td>${contribution.dueDate}</td>
             <td>${contribution.status}</td>
             <td>
-                <button class="btn" onclick="markPaid(${contribution.id})">Marquer comme payé</button>
+                <button class="bouton" onclick="markPaid(${contribution.id})">Marquer comme payé</button>
             </td>
         </tr>
     `).join('');
