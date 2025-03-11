@@ -6,7 +6,7 @@
  color: inherit;
  font: inherit;
 }
-
+/* le style pour le body*/
 body {
  font-family: Arial, sans-serif;
  line-height: 1.6;
@@ -41,7 +41,7 @@ body {
  min-height: 100vh;
 }
 
-/* Header */
+/* le styl des Headers */
 .header {
  color: black;
  text-align: center;
