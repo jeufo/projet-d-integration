@@ -1,4 +1,5 @@
-=<?php
+<?php
+header('Content-Type: application/json');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -7,11 +8,11 @@ try {
     $database = new PDO('mysql:host=localhost;dbname=tontine', 'root', '');
     $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $resultat = $database->query('SELECT * FROM users');
-    while ($user = $resultat->fetch(PDO::FETCH_ASSOC)) {
-        echo "User: " . $user['username'] . "<br>"; // Affichez les données des utilisateurs
-    }
+    $resultat = $database->query('SELECT * FROM members');
+    $members = $resultat->fetchAll(PDO::FETCH_ASSOC);
+
+    echo json_encode($members);
 } catch (PDOException $e) {
-    echo 'Connection failed: ' . $e->getMessage();
+    echo json_encode(['error' => 'Connection failed: ' . $e->getMessage()]);
 }
 ?>

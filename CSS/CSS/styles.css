@@ -1,0 +1,91 @@
+/* Mise en page de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.home-container {
+    height: 100%;
+    background: url('../images/fond.jpg') no-repeat center  ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.overlay {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Légère opacité pour le contraste */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #0425e0; /* Couleur verte */
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3e16ad; /* Changer la teinte sur hover */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}

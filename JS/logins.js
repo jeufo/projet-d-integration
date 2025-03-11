@@ -13,13 +13,13 @@ document
    },
    body: JSON.stringify({ email, password }),
   })
-   .then((response) => response.text())
+   .then((response) => response.json())
    .then((data) => {
     console.log("Réponse du serveur :", data); // Affiche la réponse dans la console
-    if (data === "Connexion réussie !") {
-     window.location.href = "/../HTML/dashbord.html";
+    if (data.success) {
+     window.location.href = data.redirect; // Redirige vers l'URL spécifiée par le serveur
     } else {
-     alert(data); // Affiche un message d'erreur
+     alert(data.message); // Affiche un message d'erreur
     }
    })
    .catch((error) => console.error("Erreur:", error));

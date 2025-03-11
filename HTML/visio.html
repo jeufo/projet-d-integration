@@ -7,39 +7,60 @@
     <link rel="stylesheet" href="../CSS/visio.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Réunion en Ligne</h1>
-        </div>
-    </header>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <img src="../images/Logo.png" alt="images">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="dashbord.html">Tableau de bord</a></li>
+                        <li>
+                            <a href="#">Gestion des membres</a>
+                            <ul class="dropdown">
+                                <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                                <li><a href="contributions.html">Contributions</a></li>
+                                <li><a href="emprunts.html">Emprunts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Suivi</a>
+                            <ul class="dropdown">
+                                <li><a href="suivi.html">Suivi</a></li>
+                                <li><a href="historique.html">Historique</a></li>
+                                <li><a href="tableau-de-bord.html">Rapport</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="reunions.html">Reunion</a>
+                            <ul class="dropdown">
+                                <li><a href="reunions.html">Reunion</a></li>
+                                <li><a href="visio.html">Visioconférence</a></li>
+                                <li><a href="tirages.html">Tirages</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="paiements.html">Paiement</a></li>
+                        <li>
+                            <a href="person.html">Contact</a>
+        <ul class="dropdown">
+         <li><a href="person.html">Contact</a></li>
+         <li><a href="notifications.html">Notification</a></li>
+        </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
     <main class="main-content">
         <div class="container">
-            <nav class="nav">
-                <ul>
-                    <li><a href="dashbord.html">Tableau de bord</a></li>
-                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
-                    <li><a href="contributions.html">Contributions</a></li>
-                    <li><a href="emprunts.html">Emprunts</a></li>
-                    <li><a href="suivi.html">Suivi</a></li>
-                    <li><a href="historique.html">Historique</a></li>
-                    <li><a href="reunions.html">Reunion</a></li>
-                    <li><a href="notifications.html">Notification</a></li>
-                    <li><a href="tableau-de-bord.html">Tableau_de_Bord</a></li>
-                    <li><a href="tirages.html">Tirages</a></li>
-                    <li><a href="visio.html">Visioconférence</a></li>
-                    <li><a href="paiements.html">Paiement</a></li>
-                    <li><a href="person.html">Personnalisation et Langues</a></li>
-                </ul>
-            </nav>
             <section class="video-section">
                 <h2>Visioconférence</h2>
                 <iframe 
                     id="videoFrame"
                     src="https://youtube.com/embed" 
                     allow="camera; microphone; fullscreen"
-                    title="Visioconférence"
-                    frameborder="0"></iframe>
+                    style="border:0;"></iframe>
+                <button type="button" class="btn" onclick="joinMeeting()">Rejoindre la Réunion</button>
                 <button class="btn" onclick="joinMeeting()">Rejoindre la Réunion</button>
             </section>
 
@@ -56,8 +77,45 @@
                 </div>
             </section>
         </div>
+        </div>
     </main>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>À propos de nous</h3>
+                <p>Nous sommes une organisation dédiée à la gestion de tontines et à l'amélioration de la vie
+                    financière de nos membres.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="dashbord.html">Tableau de bord</a></li>
+                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                    <li><a href="contributions.html">Contributions</a></li>
+                    <li><a href="emprunts.html">Emprunts</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@tontine.com</p>
+                <p>Téléphone: 4189441971 </p>
+                <p>Adresse: 123 Rue de la Tontine, Ottawa, Canada</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-login">
+                    <a href="https://www.facebook.com" class="btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                    <a href="https://accounts.google.com/" class="btn google" title="Google"><i class="fa-brands fa-google"></i>Google</a>
+                    <a href="https://www.twitter.com" class="btn twitter" title="Twitter"><i
+                            class="fa-brands fa-twitter"></i>Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tontine. Tous droits réservés.</p>
+        </div>
+    </footer>
     <script src="../JS/visio.js"></script>
 </body>
 </html>

@@ -7,57 +7,115 @@
     <link rel="stylesheet" href="../CSS/paiement.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <ul>
-                    <li><a href="dashbord.html">Tableau de bord</a></li>
-                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
-                    <li><a href="contributions.html">Contributions</a></li>
-                    <li><a href="emprunts.html">Emprunts</a></li>
-                    <li><a href="suivi.html">Suivi</a></li>
-                    <li><a href="historique.html">Historique</a></li>
-                    <li><a href="reunions.html">Reunion</a></li>
-                    <li><a href="notifications.html">Notification</a></li>
-                    <li><a href="tableau-de-bord.html">Rapports</a></li>
-                    <li><a href="tirages.html">Tirages</a></li>
-                    <li><a href="visio.html">Visioconférence</a></li>
-                    <li><a href="paiements.html">Paiement</a></li>
-                    <li><a href="person.html">Personnalisation et Langues</a></li>
-                </ul>
-            </nav>
-            <h1>Paiement en Ligne</h1>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <div class="container">
-            <section class="payment-section">
-                <h2>Effectuer un Paiement</h2>
-                <form id="paymentForm" class="payment-form">
-                    <label for="amount">Montant (CAD)</label>
-                    <input type="number" id="amount" placeholder="Entrez le montant" required min="1">
-
-                    <label for="paymentMethod">Méthode de Paiement</label>
-                    <select id="paymentMethod" required>
-                        <option value="paypal">PayPal</option>
-                        <option value="stripe">Carte Bancaire (Stripe)</option>
-                    </select>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Votre email" required>
-
-                    <button type="submit" class="btn">Payer Maintenant</button>
-                </form>
-            </section>
-
-            <div id="confirmationMessage" class="confirmation-message hidden">
-                <h3>Merci pour votre paiement !</h3>
-                <p>Votre transaction a été enregistrée avec succès.</p>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <img src="../images/Logo.png" alt="images">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="dashbord.html">Tableau de bord</a></li>
+                        <li>
+                            <a href="#">Gestion des membres</a>
+                            <ul class="dropdown">
+                                <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                                <li><a href="contributions.html">Contributions</a></li>
+                                <li><a href="emprunts.html">Emprunts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Suivi</a>
+                            <ul class="dropdown">
+                                <li><a href="suivi.html">Suivi</a></li>
+                                <li><a href="historique.html">Historique</a></li>
+                                <li><a href="tableau-de-bord.html">Rapport</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="reunions.html">Reunion</a>
+                            <ul class="dropdown">
+                                <li><a href="reunions.html">Reunion</a></li>
+                                <li><a href="visio.html">Visioconférence</a></li>
+                                <li><a href="tirages.html">Tirages</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="paiements.html">Paiement</a></li>
+                        <li>
+                            <a href="person.html">Contact</a>
+                            <ul class="dropdown">
+                                <li><a href="person.html">Contact</a></li>
+                                <li><a href="notifications.html">Notification</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </main>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <section class="payment-section">
+                    <h2>Effectuer un Paiement</h2>
+                    <form id="paymentForm" class="payment-form">
+                        <label for="amount">Montant (CAD)</label>
+                        <input type="number" id="amount" placeholder="Entrez le montant" required min="1">
 
+                        <label for="paymentMethod">Méthode de Paiement</label>
+                        <select id="paymentMethod" required>
+                            <option value="paypal">PayPal</option>
+                            <option value="stripe">Carte Bancaire (Stripe)</option>
+                        </select>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Votre email" required>
+
+                        <button type="submit" class="btn">Payer Maintenant</button>
+                    </form>
+                </section>
+
+                <div id="confirmationMessage" class="confirmation-message hidden">
+                    <h3>Merci pour votre paiement !</h3>
+                    <p>Votre transaction a été enregistrée avec succès.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-section">
+                    <h3>À propos de nous</h3>
+                    <p>Nous sommes une organisation dédiée à la gestion de tontines et à l'amélioration de la vie financière de nos membres.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="dashbord.html">Tableau de bord</a></li>
+                        <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                        <li><a href="contributions.html">Contributions</a></li>
+                        <li><a href="emprunts.html">Emprunts</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: ProjetIntegration@gmail.com</p>
+                    <p>Téléphone: --- --- ---</p>
+                    <p>Adresse: --- --- ------------</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-login">
+                        <a href="https://www.facebook.com" class="btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                        <a href="https://accounts.google.com/" class="btn google" title="Google"><i class="fa-brands fa-google"></i>Google</a>
+                        <a href="https://www.twitter.com" class="btn twitter" title="Twitter"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2025 Tontine. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
     <script src="../JS/paiement.js"></script>
 </body>
 </html>

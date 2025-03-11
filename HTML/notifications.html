@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notifications en Temps Réel</title>
-    <link rel="stylesheet" href="../CSS/notification.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <ul>
-                    <li><a href="dashbord.html">Tableau de bord</a></li>
-                    <li><a href="gestion-membre.html">Gestion des membres</a></li>
-                    <li><a href="contributions.html">Contributions</a></li>
-                    <li><a href="emprunts.html">Emprunts</a></li>
-                    <li><a href="suivi.html">Suivi</a></li>
-                    <li><a href="historique.html">Historique</a></li>
-                    <li><a href="reunions.html">Reunion</a></li>
-                    <li><a href="notifications.html">Notification</a></li>
-                    <li><a href="tableau-de-bord.html">Rapports</a></li>
-                    <li><a href="tirages.html">Tirages</a></li>
-                    <li><a href="visio.html">Visioconférence</a></li>
-                    <li><a href="paiements.html">Paiement</a></li>
-                    <li><a href="person.html">Personnalisation et Langues</a></li>
-                </ul>
-            </nav>
-            <h1>Notifications en Temps Réel</h1>
-            <button id="sendNotificationBtn" class="btn">Envoyer une Notification</button>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <div class="container">
-            <h2>Liste des Notifications</h2>
-            <ul id="notificationsList" class="notifications-list">
-                <!-- Les notifications s'afficheront ici dynamiquement -->
-            </ul>
-        </div>
-    </main>
-
-    <!-- Modal pour Envoyer une Notification -->
-    <div id="notificationModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Envoyer une Notification</h2>
-            <form id="notificationForm">
-                <label for="notificationTitle">Titre :</label>
-                <input type="text" id="notificationTitle" placeholder="Ex: Rappel de réunion" required>
-                <label for="notificationMessage">Message :</label>
-                <textarea id="notificationMessage" placeholder="Contenu de la notification" required></textarea>
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
-        </div>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notifications en Temps Réel</title>
+  <link rel="stylesheet" href="../CSS/notification.css" />
+ </head>
+ <body>
+  <div class="wrapper">
+   <header class="header">
+    <div class="container">
+     <img src="../images/Logo.png" alt="images" />
+     <nav class="nav">
+      <ul>
+       <li><a href="dashbord.html">Tableau de bord</a></li>
+       <li>
+        <a href="#">Gestion des membres</a>
+        <ul class="dropdown">
+         <li><a href="gestion-membre.html">Gestion des membres</a></li>
+         <li><a href="contributions.html">Contributions</a></li>
+         <li><a href="emprunts.html">Emprunts</a></li>
+        </ul>
+       </li>
+       <li>
+        <a href="#">Suivi</a>
+        <ul class="dropdown">
+         <li><a href="suivi.html">Suivi</a></li>
+         <li><a href="historique.html">Historique</a></li>
+         <li><a href="tableau-de-bord.html">Rapport</a></li>
+        </ul>
+       </li>
+       <li>
+        <a href="reunions.html">Reunion</a>
+        <ul class="dropdown">
+         <li><a href="reunions.html">Reunion</a></li>
+         <li><a href="visio.html">Visioconférence</a></li>
+         <li><a href="tirages.html">Tirages</a></li>
+        </ul>
+       </li>
+       <li><a href="paiements.html">Paiement</a></li>
+       <li>
+        <a href="person.html">Contact</a>
+        <ul class="dropdown">
+         <li><a href="person.html">Contact</a></li>
+         <li><a href="notifications.html">Notification</a></li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
     </div>
+   </header>
 
-    <script src="../JS/notifications.js"></script>
-</body>
+   <main class="main-content">
+    <div class="notification-center">
+     <h1>Notifications en Temps Réel</h1>
+     <button id="sendNotificationBtn" class="btn">
+      Envoyer une Notification
+     </button>
+    </div>
+    <div class="notifications-container">
+     <h2>Liste des Notifications</h2>
+     <ul id="notificationsList" class="notifications-list">
+      <!-- Les notifications s'afficheront ici dynamiquement -->
+     </ul>
+    </div>
+   </main>
+
+   <!-- Modal pour Envoyer une Notification -->
+   <div id="notificationModal" class="modal">
+    <div class="modal-content">
+     <span class="close">&times;</span>
+     <h2>Envoyer une Notification</h2>
+     <form id="notificationForm">
+      <label for="notificationTitle">Titre :</label>
+      <input
+       type="text"
+       id="notificationTitle"
+       placeholder="Ex: Rappel de réunion"
+       required
+      />
+      <label for="notificationMessage">Message :</label>
+      <textarea
+       id="notificationMessage"
+       placeholder="Contenu de la notification"
+       required
+      ></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script src="../JS/notifications.js"></script>
+ </body>
 </html>

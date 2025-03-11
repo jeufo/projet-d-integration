@@ -3,62 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paramètres et Personnalisation</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../CSS/personnalisation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("KdZgz0oYFWm6a3pqk"); // Remplacez par votre User ID
+    })();
+  </script>
+</head>
 </head>
 <body>
-    <header class="header">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <img src="../images/Logo.png" alt="images" />
+                <nav class="nav">
+                    <ul>
+                        <li><a href="dashbord.html">Tableau de bord</a></li>
+                        <li>
+                            <a href="#">Gestion des membres</a>
+                            <ul class="dropdown">
+                                <li><a href="gestion-membre.html">Gestion des membres</a></li>
+                                <li><a href="contributions.html">Contributions</a></li>
+                                <li><a href="emprunts.html">Emprunts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Suivi</a>
+                            <ul class="dropdown">
+                                <li><a href="suivi.html">Suivi</a></li>
+                                <li><a href="historique.html">Historique</a></li>
+                                <li><a href="tableau-de-bord.html">Rapport</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="reunions.html">Reunion</a>
+                            <ul class="dropdown">
+                                <li><a href="reunions.html">Reunion</a></li>
+                                <li><a href="visio.html">Visioconférence</a></li>
+                                <li><a href="tirages.html">Tirages</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="paiements.html">Paiement</a></li>
+                        <li>
+                            <a href="person.html">Contact</a>
+        <ul class="dropdown">
+         <li><a href="person.html">Contact</a></li>
+         <li><a href="notifications.html">Notification</a></li>
+        </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <main class="main-content">
+      <!DOCTYPE html>
+<html lang="fr">
+
+ 
+  
+<main>
+  <div class="contact-container">
+    <h1>Contactez-nous</h1>
+    <p>Nous serions ravis de répondre à vos questions !</p>
+
+    <form id="contact-form" class="contact-form">
+      <!-- Champ Nom -->
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+        </div>
+      </div>
+
+      <!-- Champ Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <div class="input-container">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+      </div>
+
+      <!-- Champ Sujet -->
+      <div class="form-group">
+        <label for="subject">Sujet</label>
+        <div class="input-container">
+          <i class="fas fa-tag"></i>
+          <input type="text" id="objet" name="objet" placeholder="Objet de votre message" required>
+        </div>
+      </div>
+
+      <!-- Champ Message -->
+      <div class="form-group">
+        <label for="message">Message</label>
+        <div class="input-container">
+          <i class="fas fa-comment"></i>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+        </div>
+      </div>
+
+      <!-- Bouton d'envoi -->
+      <button type="submit" class="submit-btn">
+        <i class="fas fa-paper-plane"></i> Envoyer
+      </button>
+    </form>
+  </div>
+</main>
+<footer class="footer">
         <div class="container">
-            <nav class="nav">
+            <div class="footer-section">
+                <h3>À propos de nous</h3>
+                <p>
+                    Nous sommes une organisation dédiée à la gestion de tontines et à
+                    l'amélioration de la vie financière de nos membres.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
                 <ul>
                     <li><a href="dashbord.html">Tableau de bord</a></li>
                     <li><a href="gestion-membre.html">Gestion des membres</a></li>
                     <li><a href="contributions.html">Contributions</a></li>
                     <li><a href="emprunts.html">Emprunts</a></li>
-                    <li><a href="suivi.html">Suivi</a></li>
-                    <li><a href="historique.html">Historique</a></li>
-                    <li><a href="reunions.html">Reunion</a></li>
-                    <li><a href="notifications.html">Notification</a></li>
-                    <li><a href="tableau-de-bord.html">Rapports</a></li>
-                    <li><a href="tirages.html">Tirages</a></li>
-                    <li><a href="visio.html">Visioconférence</a></li>
-                    <li><a href="paiements.html">Paiement</a></li>
-                    <li><a href="person.html">Personnalisation et Langues</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
-            <h1>Paramètres et Personnalisation</h1>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <div class="container">
-            <section class="preferences-section">
-                <h2>Préférences de Langue</h2>
-                <form id="languageForm" class="preferences-form">
-                    <label for="language">Choisir la langue :</label>
-                    <select id="language" required>
-                        <option value="fr">Français</option>
-                        <option value="en">Anglais</option>
-                    </select>
-
-                    <h2>Notifications</h2>
-                    <label for="emailNotifications">Notifications par Email :</label>
-                    <input type="checkbox" id="emailNotifications" checked>
-
-                    <label for="smsNotifications">Notifications par SMS :</label>
-                    <input type="checkbox" id="smsNotifications">
-
-                    <button type="submit" class="btn">Sauvegarder les Paramètres</button>
-                </form>
-            </section>
-
-            <div id="confirmationMessage" class="confirmation-message hidden">
-                <h3>Paramètres sauvegardés avec succès !</h3>
-                <p>Vos préférences ont été mises à jour.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: ProjetIntegration@gmail.com</p>
+                <p>Téléphone: --- --- ---</p>
+                <p>Adresse: --- --- ------------</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-login">
+                    <a href="https://www.facebook.com" class="btn facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://accounts.google.com/" class="btn google"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.twitter.com" class="btn twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2025 Tontine. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Empêche le rechargement de la page
 
+        // Récupère les données du formulaire
+        const formData = {
+          nom: document.getElementById("nom").value,
+          email: document.getElementById("email").value,
+          objet: document.getElementById("objet").value,
+          message: document.getElementById("message").value,
+        };
+
+        // Envoie l'e-mail à vous-même
+        emailjs
+          .send("service_zroixeq", "template_ftxofvl", formData) // Remplacez par vos IDs
+          .then(
+            function (response) {
+              console.log("E-mail envoyé avec succès !", response);
+              // Envoie la réponse automatique à l'utilisateur
+              emailjs
+                .send("service_zroixeq", "template_ftxofvl", formData) // Remplacez par vos IDs
+                .then(
+                  function (response) {
+                    console.log("Réponse automatique envoyée !", response);
+                    alert("Merci pour votre message ! Nous vous avons envoyé une confirmation par e-mail.");
+                  },
+                  function (error) {
+                    console.log("Erreur lors de l'envoi de la réponse automatique", error);
+                  }
+                );
+            },
+            function (error) {
+              console.log("Erreur lors de l'envoi de l'e-mail", error);
+              alert("Une erreur s'est produite. Veuillez réessayer.");
+            }
+          );
+      });
+  </script>
     <script src="../JS/personnalisation.js"></script>
 </body>
 </html>
