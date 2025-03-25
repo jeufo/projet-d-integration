@@ -12,16 +12,20 @@ try {
     $email = $data['email'];
     $password = $data['password'];
 
-    $stmt = $database->prepare('SELECT * FROM users WHERE email = :email AND password = :password');
+    $stmt = $database->prepare('SELECT * FROM users WHERE email = :email');
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $password);
     $stmt->execute();
 
     if ($stmt->rowCount() > 0) {
-        // Connexion réussie, redirection vers le tableau de bord
-        echo json_encode(['success' => true, 'redirect' => '../HTML/dashbord.html']);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (password_verify($password, $user['password'])) {
+            // Connexion réussie, redirection vers le tableau de bord
+            echo json_encode(['success' => true, 'redirect' => '../HTML/dashbord.html']);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Mot de passe incorrect.']);
+        }
     } else {
-        echo json_encode(['success' => false, 'message' => 'Email ou mot de passe incorrect.']);
+        echo json_encode(['success' => false, 'message' => 'Email incorrect.']);
     }
 } catch (PDOException $e) {
     echo json_encode(['success' => false, 'message' => 'Connection failed: ' . $e->getMessage()]);

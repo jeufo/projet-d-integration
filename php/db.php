@@ -9,7 +9,7 @@ try {
 
     $resultat = $database->query('SELECT * FROM users');
     while ($user = $resultat->fetch(PDO::FETCH_ASSOC)) {
-        echo "User: " . $user['username'] . "<br>"; // Affichez les données des utilisateurs
+         // Affichez les données des utilisateurs
     }
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
